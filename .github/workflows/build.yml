@@ -29,7 +29,7 @@ jobs:
     - name: Script
       run: |
         ##### start IntaRNA build #####
-        cd $TRAVIS_BUILD_DIR
+        pwd
         # generate autotools's files 
         bash autotools-init.sh 
         # run configure (without boost checks)
