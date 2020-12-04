@@ -18,7 +18,7 @@ jobs:
         activate-conda: true
     - name: Create conda environement
       run: |
-        conda init bash
+        source `conda info --base`/etc/profile.d/conda.sh
         conda create -q -n build-IntaRNA -c bioconda gcc_linux-64 gxx_linux-64 boost-cpp viennarna pkgconfig
         conda activate build-IntaRNA
     - name: Script
